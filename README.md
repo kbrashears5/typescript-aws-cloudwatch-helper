@@ -5,7 +5,7 @@
 <b>Typescript helper functions for AWS CloudWatch service</b>
     
 [![Build Status](https://dev.azure.com/kbrashears5/github/_apis/build/status/kbrashears5.typescript-aws-cloudwatch-helper?branchName=master)](https://dev.azure.com/kbrashears5/github/_build/latest?definitionId=17&branchName=master)
-[![Tecloudwatch](https://img.shields.io/azure-devops/tests/kbrashears5/github/17)](https://img.shields.io/azure-devops/tests/kbrashears5/github/17)
+[![Tests](https://img.shields.io/azure-devops/tests/kbrashears5/github/17)](https://img.shields.io/azure-devops/tests/kbrashears5/github/17)
 [![Code Coverage](https://img.shields.io/azure-devops/coverage/kbrashears5/github/17)](https://img.shields.io/azure-devops/coverage/kbrashears5/github/17)
 
 [![NPM Version](https://img.shields.io/npm/v/typescript-aws-cloudwatch-helper)](https://img.shields.io/npm/v/typescript-aws-cloudwatch-helper)
