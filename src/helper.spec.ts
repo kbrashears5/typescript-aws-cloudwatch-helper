@@ -5,11 +5,9 @@ import { CloudWatchMock } from './mock';
 
 const logger = new Logger(LogLevel.Off);
 const mockerResolves = new CloudWatchMock(false);
-const cloudWatchHelperMockResolves = new CloudWatchHelper(logger,
-    mockerResolves.Mock);
+const cloudWatchHelperMockResolves = new CloudWatchHelper(logger, mockerResolves.Mock);
 const mockerRejects = new CloudWatchMock(true);
-const cloudWatchHelperMockRejects = new CloudWatchHelper(logger,
-    mockerRejects.Mock);
+const cloudWatchHelperMockRejects = new CloudWatchHelper(logger, mockerRejects.Mock);
 const TestValues = new TestingValues();
 
 /**
