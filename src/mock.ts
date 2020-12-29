@@ -1,7 +1,5 @@
 import { BaseMock } from 'typescript-helper-functions';
-
-// tslint:disable-next-line: no-var-requires
-const AWS = require('aws-sdk');
+import * as CloudWatch from '@aws-sdk/client-cloudwatch';
 
 /**
  * CloudWatch Mock class
@@ -32,8 +30,10 @@ export class CloudWatchMock extends BaseMock {
             },
         };
 
+        const options = {} as CloudWatch.CloudWatch;
+
         // create the functions
-        let functions = new AWS.CloudWatch();
+        let functions = new CloudWatch.CloudWatch(options);
         functions = {
             putMetricData: () => awsResponses.putMetricData,
         };
