@@ -11,13 +11,13 @@ export class CloudWatchHelper extends BaseClass implements ICloudWatchHelper {
     /**
      * AWS Repository for CloudWatch
      */
-    public Repository: CloudWatch.CloudWatch;
+    private Repository: CloudWatch.CloudWatch;
 
     /**
      * Initializes new instance of CloudWatchHelper
      * @param logger {ILogger} Injected logger
      * @param repository {CloudWatch.CloudWatch} Injected Repository. A new repository will be created if not supplied
-     * @param options {CloudWatch.ClientConfiguration} Injected configuration if a Repository is supplied
+     * @param options {CloudWatch.CloudWatchClientConfig} Injected configuration if a Repository is supplied
      */
     constructor(logger: ILogger,
         repository?: CloudWatch.CloudWatch,
