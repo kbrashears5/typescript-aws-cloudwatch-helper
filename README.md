@@ -46,3 +46,6 @@ const helper = new CloudWatchHelper(logger,
 const response = await helper.PutMetricDataAsync('namespace',
     [] as AWS.CloudWatch.MetricDatum[]);
 ```
+
+## Notes
+If no options are supplied, will default to `us-east-1` as the region

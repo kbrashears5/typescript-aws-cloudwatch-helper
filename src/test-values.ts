@@ -1,3 +1,5 @@
+import * as CloudWatch from '@aws-sdk/client-cloudwatch';
+
 /**
  * Test values
  */
@@ -27,5 +29,5 @@ export class TestingValues {
     public Uuid: string = 'uuid';
 
     // objects
-    public MetricDatum: AWS.CloudWatch.MetricDatum[] = [{ MetricName: this.Name }];
+    public MetricDatum: CloudWatch.MetricDatum[] = [{ MetricName: this.Name }];
 }
