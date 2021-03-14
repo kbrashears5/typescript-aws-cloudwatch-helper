@@ -37,21 +37,23 @@ const response = await helper.PutMetricDataAsync(
 ### Running in separate account or not in Lambda
 
 ```typescript
+import * as CloudWatch from '@aws-sdk/client-cloudwatch';
+
 const logger = new Logger(LogLevel.Trace);
 
-const options: AWS.CloudWatch.ClientConfiguration = {
+const options: CloudWatch.CloudWatchClientConfig = {
   accessKeyId: '{access_key}',
   secretAccessKey: '{secret_key}',
   region: 'us-east-1',
 };
 
-const repository = new AWS.CloudWatch(options);
+const repository = new CloudWatch.CloudWatch(options);
 
 const helper = new CloudWatchHelper(logger, repository);
 
 const response = await helper.PutMetricDataAsync(
   'namespace',
-  [] as AWS.CloudWatch.MetricDatum[],
+  [] as CloudWatch.MetricDatum[],
 );
 ```
 
