@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as CloudWatch from '@aws-sdk/client-cloudwatch';
 
 /**
@@ -12,5 +13,5 @@ export interface ICloudWatchHelper {
   PutMetricDataAsync(
     namespace: string,
     metricData: CloudWatch.MetricDatum[],
-  ): Promise<object>;
+  ): Promise<any>;
 }

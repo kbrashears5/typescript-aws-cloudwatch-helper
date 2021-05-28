@@ -2,10 +2,10 @@ import { Logger, LogLevel } from 'typescript-ilogger';
 import { TestingValues } from './test-values';
 import { CloudWatchHelper } from './helper';
 
-const putMetricDataResponse: object = {};
+const putMetricDataResponse: any = {};
 
 const putMetricData = jest.fn().mockImplementation(() => {
-  return Promise.resolve<{}>(putMetricDataResponse);
+  return Promise.resolve<any>(putMetricDataResponse);
 });
 
 // mock the functions
@@ -48,7 +48,7 @@ describe(`${CloudWatchHelper.name}.${cloudWatchHelperMock.PutMetricDataAsync.nam
       `[${action}]-${TestValues.MustSupply} metricData`,
     );
   });
-  test(TestValues.ValidTest, () => {
+  test(`${TestValues.ValidTest}`, () => {
     const actual = cloudWatchHelperMock.PutMetricDataAsync(
       TestValues.Namespace,
       TestValues.MetricDatum,

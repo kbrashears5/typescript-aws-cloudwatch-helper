@@ -27,7 +27,7 @@ const TestValues = new TestingValues();
  * Test the PutMetricDataAsync method
  */
 describe(`${CloudWatchHelper.name}.${cloudWatchHelperMock.PutMetricDataAsync.name}`, () => {
-  test(TestValues.InvalidTest, () => {
+  test(`${TestValues.InvalidTest}`, () => {
     const actual = cloudWatchHelperMock.PutMetricDataAsync(
       TestValues.Namespace,
       TestValues.MetricDatum,

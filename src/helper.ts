@@ -24,9 +24,11 @@ export class CloudWatchHelper extends BaseClass implements ICloudWatchHelper {
     options?: CloudWatch.CloudWatchClientConfig,
   ) {
     super(logger);
+    // eslint-disable-next-line no-param-reassign
     options = this.ObjectOperations.IsNullOrEmpty(options)
       ? ({ region: 'us-east-1' } as CloudWatch.CloudWatchClientConfig)
-      : options!;
+      : // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        options!;
     this.Repository = repository || new CloudWatch.CloudWatch(options);
   }
 
@@ -38,7 +40,7 @@ export class CloudWatchHelper extends BaseClass implements ICloudWatchHelper {
   public async PutMetricDataAsync(
     namespace: string,
     metricData: CloudWatch.MetricDatum[],
-  ): Promise<object> {
+  ): Promise<any> {
     const action = `${CloudWatchHelper.name}.${this.PutMetricDataAsync.name}`;
     this.LogHelper.LogInputs(action, { namespace, metricData });
 
